@@ -1,0 +1,28 @@
+{
+  "hosting": [
+    {
+      "site": "nova-portfolio-40c3c",
+      "predeploy": "yarn build && yarn export",
+      "public": "out",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    },
+    {
+      "site": "nova-portfolio-develop",
+      "predeploy": "yarn build && yarn export",
+      "public": "out",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}

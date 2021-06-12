@@ -1,0 +1,17 @@
+{
+  "projects": {
+    "default": "nova-portfolio-40c3c"
+  },
+  "targets": {
+    "nova-portfolio-40c3c": {
+      "hosting": {
+        "prd-site": [
+          "nova-portfolio-40c3c"
+        ],
+        "dev-site": [
+          "nova-portfolio-develop"
+        ]
+      }
+    }
+  }
+}

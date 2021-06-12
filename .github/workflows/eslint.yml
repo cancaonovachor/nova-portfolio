@@ -1,0 +1,21 @@
+# This is a basic workflow to help you get started with Actions
+
+name: eslint-dog
+on:
+  pull_request:
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: npm install
+        run: npm install
+        working-directory: ./src
+      - name: Run eslint with reviewdog
+        uses: reviewdog/action-eslint@v1
+        with:
+          workdir: src
+          eslint_flags: '--ext .js,.ts .'
