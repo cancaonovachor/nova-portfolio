@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout Repo
-      - uses: actions/checkout@v2
+        uses: actions/checkout@v2
       - name: cache node_modules
         id: node_modules_cache_id
         uses: actions/cache@v2
@@ -19,9 +19,10 @@ jobs:
           path: |
             node_modules
           key: node-v${{ matrix.node-version }}-deps-${{ hashFiles(format('{0}{1}', github.workspace, '/yarn.lock')) }}
-      - run: yarn install
+      - name: yarn install
+        run: yarn install
       - name: deploy to firebase hosting
-      - uses: FirebaseExtended/action-hosting-deploy@v0
+        uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_NOVA_PORTFOLIO }}'
