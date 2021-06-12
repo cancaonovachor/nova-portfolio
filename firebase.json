@@ -4,7 +4,11 @@
       "site": "nova-portfolio-40c3c",
       "predeploy": "yarn build && yarn export",
       "public": "out",
-      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
       "rewrites": [
         {
           "source": "**",
@@ -16,7 +20,11 @@
       "site": "nova-portfolio-develop",
       "predeploy": "yarn build && yarn export",
       "public": "out",
-      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
       "rewrites": [
         {
           "source": "**",
