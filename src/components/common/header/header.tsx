@@ -6,7 +6,7 @@ type Props = {
   className?: string;
 };
 
-const Component = (props: Props) => {
+export const Header = (props: Props) => {
   return (
     <>
       <Flex
@@ -33,8 +33,4 @@ const Component = (props: Props) => {
       </Flex>
     </>
   );
-};
-
-export const Header: React.FC = () => {
-  return <Component />;
 };
