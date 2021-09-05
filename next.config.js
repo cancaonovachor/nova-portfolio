@@ -7,7 +7,8 @@ const { merge } = require('webpack-merge');
 const nextConfig = {
   distDir: './.next',
   env: {
-    USE_EMULATOR: process.env.USE_EMULATOR === 'true' ? 'true' : 'false',
+    MICRO_CMS_HOST: process.env.MICRO_CMS_HOST,
+    MICRO_CMS_API_KEY: process.env.MICRO_CMS_API_KEY,
   },
   webpack: (config, { isServer }) => {
     config.module.rules.push({

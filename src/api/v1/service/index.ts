@@ -1,5 +1,5 @@
 import { GetListContentsQuery } from '../../../types/api';
-import { ServiceListResponse } from '../../../types/service';
+import { ServiceListResponse } from '../../../types/serviceResponse';
 
 export type Methods = {
   get: {
