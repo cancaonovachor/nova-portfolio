@@ -16,6 +16,6 @@
     "isolatedModules": true,
     "moduleResolution": "node"
   },
-  "include": ["src/**/*", ".eslintrc.js"],
+  "include": ["src/**/*", ".eslintrc.js", "src/types/**/*"],
   "exclude": ["node_modules"]
 }
