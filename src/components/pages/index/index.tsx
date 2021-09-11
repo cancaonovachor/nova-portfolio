@@ -7,7 +7,6 @@ import { Cover } from './cover';
 type Props = {
   className?: string;
   serviceList?: ServiceListResponse;
-  error: any;
 };
 
 export const Index: React.FC<Props> = (props: Props) => {

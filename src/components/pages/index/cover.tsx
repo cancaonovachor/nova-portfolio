@@ -7,7 +7,7 @@ type Props = {
   content: ServiceResponse;
 };
 
-export const Cover = (props: Props) => {
+export const Cover: React.FC<Props> = (props: Props) => {
   let bgColor: string;
   let memberNames = '';
   const content = props.content;
