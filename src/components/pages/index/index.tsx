@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import React from 'react';
 import { Flex } from '@chakra-ui/react';
 import { Layout } from '../../../components/common/layout/layout';
