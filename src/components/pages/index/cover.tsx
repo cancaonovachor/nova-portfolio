@@ -34,7 +34,7 @@ export const Cover: React.FC<Props> = (props: Props) => {
       <Flex
         w={{ base: '300px', md: '400px', lg: '480px', xl: '560px' }}
         h={{ base: '400px', md: '600px', lg: '688px', xl: '850px' }}
-        bg="white"
+        bg="#FFFFFE"
         rounded="md"
         shadow="lg"
       >
