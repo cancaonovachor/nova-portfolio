@@ -7,6 +7,9 @@ export const chakraTheme = extendTheme({
       100: '#33AA33', // sysdev
       200: '#23C5EB', // goods
     },
+    background: {
+      service: '#FFFFEE', // サービス詳細
+    },
   },
   components: {
     Text,
