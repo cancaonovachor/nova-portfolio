@@ -10,13 +10,16 @@ export const Book: React.FC = (props) => {
     <>
       {smUp ? (
         <HTMLFlipBook
-          style={{
-            background: '#FFFFEE',
-            boxShadow: '0 0 20px 0 rgb(0 0 0 / 50%)',
-          }}
-          startPage={1}
+          style={
+            {
+              // background: '#FFFFEE',
+              // backgroundImage: "url('/images/background.jpeg')",
+              // boxShadow: '0 0 20px 0 rgb(0 0 0 / 50%)',
+            }
+          }
+          startPage={0}
           width={550}
-          height={733}
+          height={850}
           size="fixed"
           minWidth={100}
           maxWidth={400}
@@ -24,12 +27,12 @@ export const Book: React.FC = (props) => {
           maxHeight={1533}
           drawShadow={true}
           maxShadowOpacity={0.5}
-          showCover={false}
+          showCover={true}
           mobileScrollSupport={true}
           className="cn-book"
           flippingTime={1000}
           usePortrait={false}
-          startZIndex={2}
+          startZIndex={1}
           autoSize={false}
           clickEventForward={true}
           useMouseEvents={true}
@@ -44,7 +47,7 @@ export const Book: React.FC = (props) => {
           style={{
             background: '#FFFFEE',
           }}
-          startPage={1}
+          startPage={0}
           width={300}
           height={733}
           size="fixed"
@@ -54,12 +57,12 @@ export const Book: React.FC = (props) => {
           maxHeight={1533}
           drawShadow={true}
           maxShadowOpacity={0.5}
-          showCover={false}
+          showCover={true}
           mobileScrollSupport={true}
           className="cn-book"
           flippingTime={1000}
           usePortrait={true}
-          startZIndex={2}
+          startZIndex={1}
           autoSize={false}
           clickEventForward={true}
           useMouseEvents={true}

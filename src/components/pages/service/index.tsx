@@ -1,21 +1,14 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
 import { Box, Flex } from '@chakra-ui/react';
-import { ImageResponse } from '../../../types/imageResponse';
 import { ServiceResponse } from '../../../types/serviceResponse';
 import { Book } from './book';
 import { BookContent } from './bookContent';
+import { CoverContent } from './coverContent';
 
 type Props = {
   className?: string;
   service?: ServiceResponse;
-};
-
-type PageContentDetail = {
-  content1: string;
-  image1: ImageResponse;
-  content2: string;
-  image2: ImageResponse;
 };
 
 export const Index: React.FC<Props> = (props: Props) => {
@@ -89,10 +82,19 @@ export const Index: React.FC<Props> = (props: Props) => {
     }
   }
   return (
-    <Flex w="100vw" h="100vh">
+    <Flex
+      w="100vw"
+      h="100vh"
+      backgroundImage={'/images/background.jpeg'}
+      alignItems="center"
+      justifyContent="center"
+    >
       <Box mx="auto">
-        <Box h={{ base: '20px', md: '50px' }} />
-        <Book>{Contents}</Book>
+        <Box h={{ base: '10px', md: '20px' }} />
+        <Book>
+          <CoverContent content={s} />
+          {Contents}
+        </Book>
       </Box>
     </Flex>
   );
