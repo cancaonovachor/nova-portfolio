@@ -18,7 +18,7 @@ export const NovaLogo: React.FC<Props> = (props: Props) => {
         w={{ base: '200px', md: '220px', lg: '250px', xl: '300px' }}
         h={{ base: '200px', md: '220px', lg: '250px', xl: '300px' }}
         objectFit="cover"
-        src="images/cn-logo.png"
+        src="/images/cn-logo.png"
         alt="cn-logo"
       />
     </Flex>

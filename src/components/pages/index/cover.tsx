@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { Box, Grid, GridItem, Text, Image, Flex } from '@chakra-ui/react';
 import { ServiceResponse } from '../../../types/serviceResponse';
 
@@ -29,6 +30,8 @@ export const Cover: React.FC<Props> = (props: Props) => {
     }
   });
 
+  const link = '/service/' + content?.id;
+
   return (
     <>
       <Flex
@@ -37,6 +40,7 @@ export const Cover: React.FC<Props> = (props: Props) => {
         bg="#FFFFFE"
         rounded="md"
         shadow="lg"
+        boxShadow="0 15px 10px #222"
       >
         <Grid templateColumns="repeat(5, 1fr)" h="100%">
           <GridItem colSpan={1}>
@@ -64,12 +68,16 @@ export const Cover: React.FC<Props> = (props: Props) => {
                 <Text variant="subTitle">
                   {content?.team[0].name_for_outside}
                 </Text>
-                <Text variant="coverTitle">{content?.title}</Text>
-                <Text variant="coverTitle">{content?.subtitle}</Text>
+                <Link href={link}>
+                  <Text variant="coverTitle">{content?.title}</Text>
+                </Link>
+                <Link href={link}>
+                  <Text variant="coverTitle">{content?.subtitle}</Text>
+                </Link>
               </Box>
-              <Box h="20px" />
+              <Box h={{ base: '5px', md: '20px' }} />
               <Image
-                w={{ base: '200px', md: '220px', lg: '250px', xl: '300px' }}
+                w={{ base: '110px', md: '220px', lg: '250px', xl: '300px' }}
                 objectFit="cover"
                 src={content?.eye_catch.url}
                 alt="farm tottori"
