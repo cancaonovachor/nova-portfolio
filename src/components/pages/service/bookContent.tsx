@@ -35,6 +35,7 @@ export const BookContent: React.FC<Props> = forwardRef((props, ref) => {
     <Box
       className="page"
       ref={ref}
+      backgroundColor={'#FFFFEE'}
       boxShadow={'inset 7px 0 30px -7px rgb(0 0 0 / 40%)'}
     >
       <Box className="page-content" p="20px">
